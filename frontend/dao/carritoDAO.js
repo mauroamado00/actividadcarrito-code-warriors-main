@@ -4,13 +4,12 @@ export default class CarrioDAO{
         localStorage.setItem('carrito', JSON.stringify(carrito));
     }
     
-    obtenerCarrito(){
-        
+    obtenerCarrito() {
+      
     }
 
     limpiarCarrito() {
         localStorage.removeItem('carrito');
     }
     
-
 }
