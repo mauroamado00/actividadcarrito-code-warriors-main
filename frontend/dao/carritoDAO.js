@@ -5,7 +5,8 @@ export default class CarrioDAO{
     }
     
     obtenerCarrito() {
-      
+        const guardarCarrito = localStorage.getItem('carrito');
+        return guardarCarrito ? JSON.parse(guardarCarrito) : [];
     }
 
     limpiarCarrito() {
