@@ -1,16 +1,20 @@
-export default class CarrioDAO{
+export default class carritoDAO {
 
     guardarCarrito(carrito) {
         localStorage.setItem('carrito', JSON.stringify(carrito));
     }
-    
+
     obtenerCarrito() {
-        const guardarCarrito = localStorage.getItem('carrito');
-        return guardarCarrito ? JSON.parse(guardarCarrito) : [];
+        try {
+            const carrito = localStorage.getItem('carrito');
+            return carrito ? JSON.parse(carrito) : [];
+        } catch (error) {
+            console.error('Error al obtener el carrito:', error);
+            return []; 
+        }
     }
 
     limpiarCarrito() {
         localStorage.removeItem('carrito');
     }
-    
 }

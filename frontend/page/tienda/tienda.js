@@ -1,5 +1,7 @@
 import CompraDAO from "../../dao/compraDAO.js";
 import ProductosDAO from "../../dao/productosDAO.js";
+import carritoDAO from '../../dao/carritoDAO.js';
+
 
 let carrito = [];
 window.onload = async function() {
